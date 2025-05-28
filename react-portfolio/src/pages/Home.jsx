@@ -1,8 +1,16 @@
 import { useState, useEffect } from "react";
+import Button from "../components/Button";
 //useState is used to store and manage data (in this case, text).
 //useEffect is used to run code after the component has rendered (used here to simulate typing).
 
 export default function Home(){
+    
+    <Button
+    label="Download Resume"
+    onClick={() => window.open("/resume.pdf")}
+    variant="primary"
+    size="lg"
+    />
 
     const [text, setText] = useState(''); //Initializes a state variable text with an empty string ('').
     const fullText = "Hii there! I am Md. Abu Yousuf Siam from Jagannath University, Dhaka"; 
@@ -25,5 +33,8 @@ export default function Home(){
 
     return <h1>{text}</h1>;
     //As text updates, React will re-render and show the new version.
+
+    
+
 
 } // Home function ends here

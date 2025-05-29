@@ -2,67 +2,139 @@ import React from "react";
 import Button from "../components/Button";
 import { FaGithub } from 'react-icons/fa';
 
+export default function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // add your submission logic here
+    console.log("Form submitted!");
+  };
 
-export default function Contact (){
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // add your submission logic here
-        console.log("Form submitted!");
-        };
-        
-    const project = {
-        name: 'My Portfolio',
-        githubLink: 'https://github.com/AbuYousufSiam',
-        };
+  const project = {
+    name: 'My Portfolio',
+    githubLink: 'https://github.com/AbuYousufSiam',
+  };
 
-    return (
-        <div>
-        <h2>Contact Me</h2>
+  return (
+    <div style={{ maxWidth: "600px", margin: "40px auto", fontFamily: "Arial, sans-serif", padding: "0 20px" }}>
+      <h2 style={{ color: "#2E8B57", marginBottom: "30px", textAlign: "center" }}>Contact Me</h2>
 
-        <Button label="Send Email" onClick={() => alert("Clicked")}/>
-        
-        <Button variant="secondary" label="Download Resume" onClick={() => window.open("resume.pdf")} /> <br/> <br/>
+      <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginBottom: "30px" }}>
+        <Button label="Send Email" onClick={() => alert("Clicked")} />
+        <Button
+          variant="secondary"
+          label="Download Resume"
+          onClick={() => window.open("resume.pdf")}
+        />
+      </div>
 
-        {/* <Button label="Send Message" onClick={handleSubmit} variant="secondary" fullWidth />  */}
-
-        <Button label="View GitHub" icon={FaGithub} onClick={() => window.open(project.githubLink)} variant="ghost" />
-
-<br /> <br /> 
-        <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700"> Name </label>
-            <input
-            type="text" id="name" name="name" required
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-            />
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <label
+            htmlFor="name"
+            style={{ fontWeight: "600", marginBottom: "8px", color: "#333" }}
+          >
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your full name"
+            style={{
+              padding: "10px 12px",
+              borderRadius: "6px",
+              border: "1px solid #ccc",
+              fontSize: "16px",
+              outlineColor: "#2E8B57",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
+              transition: "border-color 0.3s ease",
+            }}
+          />
         </div>
 
-        <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-            Email</label>
-            <input type="email" id="email" name="email" required
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-            />
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <label
+            htmlFor="email"
+            style={{ fontWeight: "600", marginBottom: "8px", color: "#333" }}
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+            style={{
+              padding: "10px 12px",
+              borderRadius: "6px",
+              border: "1px solid #ccc",
+              fontSize: "16px",
+              outlineColor: "#2E8B57",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
+              transition: "border-color 0.3s ease",
+            }}
+          />
         </div>
 
-        <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <label
+            htmlFor="message"
+            style={{ fontWeight: "600", marginBottom: "8px", color: "#333" }}
+          >
             Message
-            </label>
-            <textarea id="message" name="message" rows="4" required
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-            ></textarea>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="Write your message here..."
+            style={{
+              padding: "12px",
+              borderRadius: "6px",
+              border: "1px solid #ccc",
+              fontSize: "16px",
+              resize: "vertical",
+              outlineColor: "#2E8B57",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
+              transition: "border-color 0.3s ease",
+            }}
+          />
         </div>
 
-        
-            <form onSubmit={handleSubmit}>
-            {/* Your form content */}
-            <button type="submit">Send Message</button>
-            <a href="https://github.com/AbuYousufSiam" target="_blank" rel="noopener noreferrer">
-                <FaGithub />
-            </a>
-            </form>
+        <button
+          type="submit"
+          style={{
+            backgroundColor: "#2E8B57",
+            color: "white",
+            padding: "12px 20px",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+            fontWeight: "600",
+            fontSize: "16px",
+            transition: "background-color 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#246b45")}
+          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#2E8B57")}
+        >
+          Send Message
+        </button>
+      </form>
 
-
-        </div>
-    );
+      <div style={{ marginTop: "40px", textAlign: "center", color: "#666" }}>
+        <a
+          href={project.githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "#2E8B57", fontSize: "18px", display: "inline-flex", alignItems: "center", gap: "8px" }}
+        >
+          <FaGithub size={24} />
+          Visit My GitHub
+        </a>
+      </div>
+    </div>
+  );
 }

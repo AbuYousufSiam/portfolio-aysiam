@@ -17,7 +17,7 @@ export default function Navbar(){
     };
 
     return (
-        <nav style={{padding: "1rem", backgroundColor: "#66D2ED", color: "white"}}>
+        <nav style={{padding: "1rem", backgroundColor: "	#aad6ec", color: "white"}}>
 
             <button onClick={handleToggle}>
                 {isMenuOpen ? 'Close' : 'Menu'}

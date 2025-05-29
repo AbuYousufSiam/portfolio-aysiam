@@ -24,7 +24,6 @@ export default function Button({variant ="primary", label, onClick, con: Icon,
     lg: "px-6 py-3 text-lg",
     };
 
-
     const styles = {
         primary: {
             backgroundColor: "#4CAF50",
@@ -43,7 +42,6 @@ export default function Button({variant ="primary", label, onClick, con: Icon,
     };
 
     return (
-
         <button className={cn({
                 baseStyle,
                 variants:[variant],
@@ -58,7 +56,5 @@ export default function Button({variant ="primary", label, onClick, con: Icon,
             {Icon && <Icon className="inline-block mr-2" />}
             {label}
         </button>
-
-
     );
 }

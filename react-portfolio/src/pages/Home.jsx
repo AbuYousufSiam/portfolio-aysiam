@@ -7,10 +7,10 @@ export default function Home(){
 
     const [text, setText] = useState(''); //Initializes a state variable text with an empty string ('').
 
-    const name = "Siam";
-    const university = "Jagannath University, Dhaka "; 
+    const name = "A.y. Siam";
+    const university = "Jagannath University, Dhaka"; 
 
-    const fullText = `Hii there! I am ${name} from ${university}`;
+    const fullText = `Hi there! This is ${name} from ${university}`;
     //We’ll use this to simulate a typing animation.
 
     useEffect( () => {

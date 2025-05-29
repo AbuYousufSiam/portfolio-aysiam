@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio-aysiam/static/css/main.f855e6bc.css",
-    "main.js": "/portfolio-aysiam/static/js/main.40f6dd5d.js",
+    "main.css": "/portfolio-aysiam/static/css/main.150cde7f.css",
+    "main.js": "/portfolio-aysiam/static/js/main.6f57bb69.js",
     "static/js/453.bb257cf5.chunk.js": "/portfolio-aysiam/static/js/453.bb257cf5.chunk.js",
     "static/media/pp.jpeg": "/portfolio-aysiam/static/media/pp.7c87303434d8bd1b07a8.jpeg",
     "index.html": "/portfolio-aysiam/index.html",
-    "main.f855e6bc.css.map": "/portfolio-aysiam/static/css/main.f855e6bc.css.map",
-    "main.40f6dd5d.js.map": "/portfolio-aysiam/static/js/main.40f6dd5d.js.map",
+    "main.150cde7f.css.map": "/portfolio-aysiam/static/css/main.150cde7f.css.map",
+    "main.6f57bb69.js.map": "/portfolio-aysiam/static/js/main.6f57bb69.js.map",
     "453.bb257cf5.chunk.js.map": "/portfolio-aysiam/static/js/453.bb257cf5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.40f6dd5d.js"
+    "static/css/main.150cde7f.css",
+    "static/js/main.6f57bb69.js"
   ]
 }

@@ -35,7 +35,7 @@ export default function Home() {
   const profileImage = require('../img/pp.jpeg');
   const role = "Computer Science Engineer";
   const skills = ["Java", "Python", "Machine Learning", "Networking", "IoT"];
-  const linkedinURL = "https://www.linkedin.com/in/abu-yousuf-siam"; // Placeholder, update if needed
+  const linkedinURL = "https://www.linkedin.com/in/abuyousufsiam/";
   const githubURL = "https://github.com/AbuYousufSiam";
 
   return (

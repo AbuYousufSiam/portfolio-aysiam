@@ -29,7 +29,7 @@ export default function API_integration() {
     }
   }, [selectedUser, selectedDataType, isSubView]);
 
-  const handleSubView = (endpoint, id, title, type) => {
+  const handleSubView = (endpoint, id, title, type) => { //http request using fetch
     fetch(`https://jsonplaceholder.typicode.com/${endpoint}/${id}/${type}`)
       .then((res) => res.json())
       .then((data) => {
